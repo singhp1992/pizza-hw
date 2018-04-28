@@ -7,7 +7,7 @@ export default class Turbo extends PureComponent {
         return (
             <form>
             <label>
-                Tick this box for the Turbo Drone Delivery option (adds 10% to total pizza price): 
+                Turbo Drone Delivery option (adds 10% to total pizza price): 
                 <input
                     name="turbo"
                     type="checkbox"
