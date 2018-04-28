@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-//import { addBase, updateBase } from '../actions/pizza'
+import { addSauce, updateSauce } from '../actions/index'
 
-export default class SauceForm extends PureComponent {
+class SauceForm extends PureComponent {
     constructor(props) {
         super(props);
         this.state = { sauce: '20cm NY Style € 6,45' };
@@ -41,3 +41,11 @@ export default class SauceForm extends PureComponent {
         );
     }
 }
+
+const mapStateToProps = function (state, props) {
+    return {
+        sauce: state.sauce
+    }
+}
+
+export default connect(mapStateToProps, { addSauce, updateSauce })(SauceForm)

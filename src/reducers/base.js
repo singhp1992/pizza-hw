@@ -1,4 +1,4 @@
-import {ADD_BASE, UPDATE_BASE} from '../actions/pizza'
+import {ADD_BASE, UPDATE_BASE} from '../actions/index'
 
 export default function (state = [], action = {}) {
     switch (action.type) {
