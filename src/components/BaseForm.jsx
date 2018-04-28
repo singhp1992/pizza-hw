@@ -29,7 +29,7 @@ class BaseForm extends PureComponent {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Choose your pizza base:
+                    Pizza base:
           <select base={this.state.base} onChange={this.handleChange}>
                         <option base="20cm">20cm NY Style € 6,45</option>
                         <option base="25cm">25cm NY Style € 8,99</option>

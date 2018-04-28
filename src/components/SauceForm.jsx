@@ -28,7 +28,7 @@ class SauceForm extends PureComponent {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Choose your sauce:
+                    Sauce:
           <select sauce={this.state.sauce} onChange={this.handleChange}>
                         <option sauce="White Sauce">White Sauce</option>
                         <option sauce="Red Sauce">Red Sauce</option>

@@ -29,7 +29,7 @@ class ToppingsForm extends PureComponent {
             <div>
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Choose your topping #1:
+                    Topping #1:
           <select toppings={this.state.toppings} onChange={this.handleChange}>
                         <option toppings="Pineapple">Pineapple € 0,50</option>
                         <option toppings="Corn">Corn € 0,50</option>
@@ -45,7 +45,7 @@ class ToppingsForm extends PureComponent {
             <br />
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Choose your topping #2:
+                    Topping #2:
           <select toppings={this.state.toppings} onChange={this.handleChange}>
                         <option toppings="Pineapple">Pineapple € 0,50</option>
                         <option toppings="Corn">Corn € 0,50</option>
@@ -61,7 +61,7 @@ class ToppingsForm extends PureComponent {
             <br />
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Choose your topping #3: 
+                        Topping #3: 
           <select toppings={this.state.toppings} onChange={this.handleChange}>
                             <option toppings="Pineapple">Pineapple € 0,50</option>
                             <option toppings="Corn">Corn € 0,50</option>
