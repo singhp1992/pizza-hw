@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BaseForm from './components/BaseForm'
+import SauceForm from './components/SauceForm'
+import ToppingsForm from './components/ToppingsForm'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Let's Eat!</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <BaseForm />
+          <br />
+          <br />
+          <SauceForm />
+          <br /> 
+          <br />
+          <ToppingsForm />
       </div>
     );
   }
