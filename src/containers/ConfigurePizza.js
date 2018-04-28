@@ -3,6 +3,8 @@ import BaseForm from '../components/BaseForm'
 import SauceForm from '../components/SauceForm'
 import ToppingsForm from '../components/ToppingsForm'
 import Turbo from '../components/Turbo'
+import PizzaDetails from '../components/PizzaDetails'
+import TotalPrice from '../components/TotalPrice'
 
 export default class ConfigurePizza extends PureComponent {
     render() {
@@ -16,6 +18,10 @@ export default class ConfigurePizza extends PureComponent {
             <ToppingsForm />
             <br />
             <Turbo />
+            <br /> 
+            <PizzaDetails />
+            <br /> 
+            <TotalPrice />
         </div>
         )
     }

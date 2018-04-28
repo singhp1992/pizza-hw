@@ -8,6 +8,7 @@ export const ADD_SAUCE = 'ADD_SAUCE'
 export const UPDATE_SAUCE = 'UPDATE SAUCE'
 export const ADD_TOPPINGS = 'ADD_TOPPINGS'
 export const UPDATE_TOPPINGS = 'UPDATE_TOPPINGS'
+//export const FETCH_PIZZA = 'FETCH_PIZZA'
 
 // const initialState = {
 //     loading: false

@@ -43,6 +43,7 @@ class BaseForm extends PureComponent {
     }
 }
 
+
 const mapStateToProps = function (state, props) {
     return {
         base: state.base

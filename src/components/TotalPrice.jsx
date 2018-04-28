@@ -5,11 +5,11 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 //import ProductForm from './ProductForm'
 
-export default class PizzaDetails extends PureComponent {
+export default class TotalPrice extends PureComponent {
     render() {
         return (
             <div>
-                <h1 style={{ color: "silver" }}> Your Pizza Details: </h1>
+                <h2 style={{ color: "gold" }}> Total Price: </h2>
             </div>
         )
     }
