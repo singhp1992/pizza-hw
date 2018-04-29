@@ -29,7 +29,7 @@ class SauceForm extends PureComponent {
                     <select value={this.state.value} price={this.state.value} onChange={this.handleChange}>
                         <option value="White Sauce">White Sauce</option>
                         <option value="Red Sauce" >Red Sauce</option>
-                        <option value="Double Red Sauce">Double red sauce (+1.0)</option>
+                        <option value="Double Red Sauce">Double Red Sauce (+1.0)</option>
                         <option value="Mix it up!">Mix it up! (+1.50)</option>
                     </select>
                 </label>

@@ -91,7 +91,7 @@ export const bases = {
 }
 
 export const sauces = {
-    "White sauce": 0,
+    "White Sauce": 0,
     "Red Sauce": 0,
     "Double Red Sauce": 1.00,
     "Mix it up!": 1.50
