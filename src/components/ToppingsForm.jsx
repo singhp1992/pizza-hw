@@ -1,11 +1,17 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { addToppings, deleteTopping } from '../actions/index'
-import { toppings } from '../allOptions'
+//import { toppings } from '../allOptions'
 import store from '../store'
 
 
 class ToppingsForm extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = { value: '' };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
 
     handleChange = (e) => {
         if (e.target.checked) {
@@ -23,7 +29,7 @@ class ToppingsForm extends PureComponent {
                     Pineapple
                 <input name="topping"
                         type="checkbox"
-                        // checked={this.state.turbo}
+                        // checked={this.state.toppings === 'toppings'}
                         onChange={this.handleChange} />
                 </label>
                 <label>

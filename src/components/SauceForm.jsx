@@ -21,7 +21,7 @@ class SauceForm extends PureComponent {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Sauce:
-                    <select name="sauce" onSubmit={this.handleSubmit}>
+                    <select onSubmit={this.handleSubmit}>
                         {sauces.map(sauces => { return <option price={sauces.price} value={sauces.name}>{sauces.name}</option> })}}
                     </select>
                 </label>
@@ -37,4 +37,4 @@ const mapStateToProps = function (state, props) {
     }
 }
 
-export default connect(mapStateToProps)(SauceForm)
+export default connect(mapStateToProps, { addSauce })(SauceForm)
