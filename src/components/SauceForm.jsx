@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { addSauce } from '../actions/index'
 import store from '../store'
+import { sauces } from '../allOptions'
 
 class SauceForm extends PureComponent {
     constructor(props) {
@@ -40,7 +41,7 @@ class SauceForm extends PureComponent {
 
 const mapStateToProps = function (state, props) {
     return {
-        sauce: state.sauce
+        sauces: state.sauces
     }
 }
 

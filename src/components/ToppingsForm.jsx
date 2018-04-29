@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { addToppings, deleteTopping } from '../actions/index'
+import { toppings } from '../allOptions'
 import store from '../store'
 
 //use on change event to limit the number of tickboxes you can use
@@ -21,7 +22,6 @@ class ToppingsForm extends PureComponent {
         }
     }
 
-    
 
 render() {
     return (

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { addBase } from '../actions/index'
 import store from '../store'
+import {bases} from '../allOptions'
 
 class BaseForm extends PureComponent {
     constructor(props) {
@@ -27,10 +28,10 @@ class BaseForm extends PureComponent {
                 <label>
                     Pizza base:
                     <select value={this.state.value} price={this.state.price} onChange={this.handleChange}>
-                        <option price={6.49} value="20cm NY Style" >20cm NY Style € 6,45</option>
-                        <option price={6.40} value="25cm NY Style" >25cm NY Style € 8,99</option>
-                        <option price={6.47} value="30cm NY Style" >30cm NY Style € 11,49</option>
-                        <option price={6.45} value="35cm NY Style" >35cm NY Style € 13,49</option>
+                        <option value="20cm NY Style" >20cm NY Style € 6,45</option>
+                        <option value="25cm NY Style" >25cm NY Style € 8,99</option>
+                        <option value="30cm NY Style" >30cm NY Style € 11,49</option>
+                        <option value="35cm NY Style" >35cm NY Style € 13,49</option>
                     </select>
                 </label>
                 <input type="submit" base="Submit" />

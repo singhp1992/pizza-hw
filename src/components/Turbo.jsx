@@ -24,7 +24,7 @@ class Turbo extends PureComponent {
             <form>
             <label>
                 Turbo Drone Delivery (additional 10%): 
-                <input type="checkbox" value="added drone delivery"
+                <input type="checkbox" value="Turbo Drone Delivery!"
                     //checked={this.state.turbo}
                     onChange={this.handleChange} />
             </label>
