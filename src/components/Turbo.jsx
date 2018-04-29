@@ -11,7 +11,6 @@ export default class Turbo extends PureComponent {
                 <input
                     name="turbo"
                     type="checkbox"
-                    //don't need this because it's not connected to the state
                     // checked={this.state.turbo}
                     onChange={this.handleInputChange} />
             </label>

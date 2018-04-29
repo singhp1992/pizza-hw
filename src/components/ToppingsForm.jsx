@@ -1,83 +1,82 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { addToppings, updateToppings } from '../actions/index'
+import { addToppings, deleteTopping } from '../actions/index'
+import { toppings } from '../allOptions'
+import store from '../store'
+
 
 class ToppingsForm extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = { toppings: 'Pineapple' };
 
-        this.handleChange = this.handleChange.bind(this);
+    handleChange = (e) => {
+        if (e.target.checked) {
+            store.dispatch(addToppings(e.target.value))
+        } else {
+            store.dispatch(deleteTopping(e.target.value));
+        }
     }
-
-    handleChange(event) {
-        this.setState({ toppings: event.target.toppings });
-    }
-
-    // addBase = (base) => {
-    //     this.props.createBase(base)
-    // }
-
-    // updateBase = (base) => {
-    //     this.props.updateBase(this.props.match.params.id, base)
-    //     this.toggleEdit()
-    // }
-
 
     render() {
         return (
-            <div>
-            <form onSubmit={this.handleSubmit}>
+            <form>
+                <p>Toppings (€ 0,50 each) </p>
                 <label>
-                    Topping #1:
-          <select toppings={this.state.toppings} onChange={this.handleChange}>
-                        <option toppings="Pineapple">Pineapple € 0,50</option>
-                        <option toppings="Corn">Corn € 0,50</option>
-                        <option toppings="Green Olives">Green Olives € 0,50</option>
-                        <option toppings="Red Onion">Red Onion € 0,50</option>
-                        <option toppings="Spinach">Spinach € 0,50</option>
-                        <option toppings="Cherry Tomatoes">Cherry Tomatoes € 0,50</option>
-                        <option toppings="Chicken">Chicken € 0,50</option>
-                    </select>
+                    Pineapple
+                <input name="topping"
+                        type="checkbox"
+                        // checked={this.state.turbo}
+                        onChange={this.handleChange} />
                 </label>
-                <input type="submit" toppings="Submit" />
-            </form>
-            <br />
-            <form onSubmit={this.handleSubmit}>
                 <label>
-                    Topping #2:
-          <select toppings={this.state.toppings} onChange={this.handleChange}>
-                        <option toppings="Pineapple">Pineapple € 0,50</option>
-                        <option toppings="Corn">Corn € 0,50</option>
-                        <option toppings="Green Olives">Green Olives € 0,50</option>
-                        <option toppings="Red Onion">Red Onion € 0,50</option>
-                        <option toppings="Spinach">Spinach € 0,50</option>
-                        <option toppings="Cherry Tomatoes">Cherry Tomatoes € 0,50</option>
-                        <option toppings="Chicken">Chicken € 0,50</option>
-                    </select>
+                    Corn
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
                 </label>
-                <input type="submit" toppings="Submit" />
+                <br/>
+                <label>
+                    Green Olives
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
+                </label>
+                <label>
+                    Red Onion
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
+                </label>
+                <br />
+                <label>
+                    Spinach
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
+                </label>
+                <label>
+                    Cherry Tomatoes
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
+                </label>
+                <label>
+                    Chicken
+                <input
+                        name="topping"
+                        type="checkbox"
+                        onChange={this.handleChange} />
+                </label>
             </form>
-            <br />
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Topping #3: 
-          <select toppings={this.state.toppings} onChange={this.handleChange}>
-                            <option toppings="Pineapple">Pineapple € 0,50</option>
-                            <option toppings="Corn">Corn € 0,50</option>
-                            <option toppings="Green Olives">Green Olives € 0,50</option>
-                            <option toppings="Red Onion">Red Onion € 0,50</option>
-                            <option toppings="Spinach">Spinach € 0,50</option>
-                            <option toppings="Cherry Tomatoes">Cherry Tomatoes € 0,50</option>
-                            <option toppings="Chicken">Chicken € 0,50</option>
-                        </select>
-                    </label>
-                    <input type="submit" toppings="Submit" />
-                </form>
-            </div>
-        );
+        )
     }
 }
+
+
+
 
 const mapStateToProps = function (state, props) {
     return {
@@ -85,4 +84,4 @@ const mapStateToProps = function (state, props) {
     }
 }
 
-export default connect(mapStateToProps, { addToppings, updateToppings })(ToppingsForm)
+export default connect(mapStateToProps, { addToppings, deleteTopping })(ToppingsForm)

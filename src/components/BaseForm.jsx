@@ -1,40 +1,29 @@
 import React, { PureComponent } from 'react'
 //import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {addBase, updateBase} from '../actions/index'
+import { bases } from '../allOptions'
+import { addBase } from '../actions/index'
+import store from '../store'
 
 class BaseForm extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = { base: '20cm NY Style € 6,45' };
-
-        this.handleChange = this.handleChange.bind(this);
+    state = {
+        value: ' ',
+    };
+    
+    //the end of the last part changes what is put into the state - need to figure out how to put the name in there
+    handleSubmit = (e) => {
+        this.setState({ value: e.target.value });
+        store.dispatch(addBase({ value: e.target.value }))
     }
-
-    handleChange(event) {
-        this.setState({ base: event.target.base });
-    }
-
-    addBase = (base) => {
-        this.props.createBase(base)
-    }
-
-    updateBase = (base) => {
-        this.props.updateBase(this.props.match.params.id, base)
-        this.toggleEdit()
-    }
-
 
     render() {
+        //const initialValues = this.props.initialValues || {}
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Pizza base:
-          <select base={this.state.base} onChange={this.handleChange}>
-                        <option base="20cm">20cm NY Style € 6,45</option>
-                        <option base="25cm">25cm NY Style € 8,99</option>
-                        <option base="30cm">30cm NY Style € 11,49</option>
-                        <option base="35cm">35cm NY Style € 13,49</option>
+                    <select onSubmit={this.handleSubmit}>
+                        {bases.map(bases => { return <option price={bases.price} value={bases.name}>{bases.name}</option> })}}
                     </select>
                 </label>
                 <input type="submit" base="Submit" />
@@ -46,8 +35,8 @@ class BaseForm extends PureComponent {
 
 const mapStateToProps = function (state, props) {
     return {
-        base: state.base
+        bases: state.bases
     }
 }
 
-export default connect(mapStateToProps, { addBase, updateBase })(BaseForm)
+export default connect(mapStateToProps)(BaseForm)
