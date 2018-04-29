@@ -4,7 +4,7 @@ export default function (state = [], action = {}) {
     switch (action.type) {
         case ADD_TOPPINGS:
             if (state.length < 3) {
-                return state.concat(action.payload)
+                return action.payload.value
             } else {
                 return state
             }

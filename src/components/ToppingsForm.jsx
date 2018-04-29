@@ -15,67 +15,43 @@ class ToppingsForm extends PureComponent {
 
     handleChange = (e) => {
         if (e.target.checked) {
-            store.dispatch(addToppings(e.target.value))
+            store.dispatch(addToppings({ value: e.target.value }))
         } else {
-            store.dispatch(deleteTopping(e.target.value));
+            store.dispatch(deleteTopping({ value: e.target.value }));
         }
     }
 
     render() {
         return (
-            <form>
-                <p>Toppings (€ 0,50 each) </p>
-                <label>
-                    Pineapple
-                <input name="topping"
-                        type="checkbox"
-                        // checked={this.state.toppings === 'toppings'}
-                        onChange={this.handleChange} />
-                </label>
-                <label>
-                    Corn
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
-                <br/>
-                <label>
-                    Green Olives
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
-                <label>
-                    Red Onion
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
-                <br />
-                <label>
-                    Spinach
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
-                <label>
-                    Cherry Tomatoes
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
-                <label>
-                    Chicken
-                <input
-                        name="topping"
-                        type="checkbox"
-                        onChange={this.handleChange} />
-                </label>
+            <form >
+                    <legend>Toppings (Max 3 € 0,50 each)</legend>
+                    <br/>
+
+
+                    <input type="checkbox" value="Pineapple" onChange={this.handleChange} />
+                    <label for="Pineapple">Pineapple</label>
+
+                    <input type="checkbox" value="Corn" onChange={this.handleChange} />
+                    <label for="Corn">Corn</label>
+
+                    <br/>
+
+                    <input type="checkbox" value="Green Olives" onChange={this.handleChange} />
+                    <label for="Green Olives">Green Olives</label>
+
+                    <input type="checkbox" value="Red onion" onChange={this.handleChange} />
+                    <label for="Red Onion">Red Onion</label>
+
+                    <br/>
+
+                    <input type="checkbox"value="Spinach" onChange={this.handleChange} />
+                    <label for="Spinach">Spinach</label>
+
+                    <input type="checkbox" value="Cherry Tomatoes" onChange={this.handleChange} />
+                    <label for="Cherry Tomatoes">Cherry Tomatoes</label>
+
+                    <input type="checkbox" value="Chicken" onChange={this.handleChange} />
+                    <label for="Chicken">Chicken</label>
             </form>
         )
     }

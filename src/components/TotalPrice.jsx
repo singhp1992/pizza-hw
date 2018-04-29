@@ -1,24 +1,37 @@
 import React, { PureComponent } from 'react'
-//import PropTypes from 'prop-types'
-// import { connect } from 'react-redux'
-// import {bases, sauces, toppings} from '../allOptions.js'
-//import { fetchAllProducts, createProduct, deleteProduct } from '../actions/products'
-//import { Link } from 'react-router-dom'
-//import ProductForm from './ProductForm'
+import { connect } from 'react-redux'
 
-export default class TotalPrice extends PureComponent {
-    totalPrice() {
-        //return bases
-    }
+// export const toppings = {
+//     "Pineapple": 0.50,
+//     "Corn": 0.50,
+//     "Olives (green)": 0.50,
+//     "Red onion": 0.50,
+//     "Spinach": 0.50,
+//     "Cherry tomatoes": 0.50,
+//     "Chicken": 0.50,
+// }
+
+class TotalPrice extends PureComponent {
     render() {
+     
+        const basePrice = this.props.basePrice
+        const saucePrice = this.props.saucePrice
         return (
             <div>
                 <h2 style={{ color: "gold" }}> Total Price: </h2>
-                {this.totalPrice}
+                <p> {basePrice + saucePrice} </p>
             </div>
         )
     }
 }
 
-//the individual prices will show up in the pizza details 
-//this page will only show the total price! 
+function mapStateToProps(state) {
+    return {
+        basePrice: state.basePrice,
+        saucePrice: state.saucePrice,
+        //toppingPrice: state.toppingPrice
+    }
+}
+
+export default connect(mapStateToProps)(TotalPrice)
+
