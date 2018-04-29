@@ -82,3 +82,27 @@ export const toppings = [
         price: 0.50 
     }
 ]
+
+export const anotherBases = {
+    "20cm NY Style": 6.45,
+    "25cm NY Style": 8.99,
+    "30cm NY Style": 11.49,
+    "35cm NY Style": 13.49
+}
+
+export const anotherSauces = {
+    "White sauce": 0,
+    "Red Sauce": 0,
+    "Double Red Sauce": 1.00,
+    "Mix it up": 1.50
+}
+
+export const anotherToppings = {
+    "Pineapple": 0.50,
+    "Corn": 0.50,
+    "Green Olives": 0.50,
+    "Red Onion": 0.50,
+    "Spinach": 0.50,
+    "Cherry Tomatoes": 0.50,
+    "Chicken": 0.50,
+}

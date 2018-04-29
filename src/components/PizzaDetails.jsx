@@ -7,6 +7,7 @@ class PizzaDetails extends PureComponent {
         const base = this.props.base
         const sauce = this.props.sauce
         const toppings = this.props.toppings
+
         return (
             <div>
                 <h1 style={{ color: "silver" }}> Your Pizza Details: </h1>

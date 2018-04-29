@@ -25,11 +25,11 @@ class SauceForm extends PureComponent {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Sauce:
-                    <select value={this.state.value} price={this.state.price} onChange={this.handleChange}>
+                    <select value={this.state.value} price={this.state.value.price} onChange={this.handleChange}>
                         <option value="White Sauce">White Sauce</option>
                         <option value="Red Sauce" >Red Sauce</option>
-                        <option value='Double red sauce (+1.0)'>Double red sauce (+1.0)</option>
-                        <option value='Mix it up! (+1.50)'>Mix it up! (+1.50)</option>
+                        <option value="Double red sauce" price="1.0">Double red sauce (+1.0)</option>
+                        <option value="Mix it up!" price="1.50">Mix it up! (+1.50)</option>
                     </select>
                 </label>
                 <input type="submit" sauce="Submit" />
