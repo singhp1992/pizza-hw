@@ -6,7 +6,7 @@ export default function (state = [], action = {}) {
             if (state.length < 3) {
                 return state.concat(action.payload)
             } else {
-                window.alert('you can only pick three')
+                window.alert('ONLY PICK THREE')
                 return state
             }
 

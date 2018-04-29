@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { addBase } from '../actions/index'
 import store from '../store'
-import {bases} from '../allOptions'
+import { bases } from '../allOptions'
 
 class BaseForm extends PureComponent {
     constructor(props) {
@@ -19,7 +19,7 @@ class BaseForm extends PureComponent {
     }
 
     handleSubmit = (e) => {
-       e.preventDefault();
+        e.preventDefault();
     }
 
     render() {
